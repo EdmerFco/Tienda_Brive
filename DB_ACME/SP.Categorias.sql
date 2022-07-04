@@ -61,4 +61,4 @@ where idCategorias = @id
 end
 go
 
-exec Eliminar_Categoria 1
+exec Eliminar_Categoria 3

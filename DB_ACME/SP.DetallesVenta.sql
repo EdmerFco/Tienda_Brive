@@ -1,6 +1,6 @@
 
 
-alter  procedure Crear_Detalle_Venta
+create  procedure Crear_Detalle_Venta
 (
  
 @cantidad int,

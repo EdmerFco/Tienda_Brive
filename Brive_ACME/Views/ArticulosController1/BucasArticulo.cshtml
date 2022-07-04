@@ -1,21 +1,14 @@
-﻿@model IEnumerable<Brive_ACME.Models.Articulo>
+﻿@model IEnumerable<Brive_ACME.Models.Busqueda>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "BucasArticulo";
 }
 
-<h1>Listado </h1>
+<h1>BucasArticulo</h1>
 
-<div class="input-group">
-  <div class="form-outline"> 
-    <input type="search" id="INPUTBuscar" class="form-control"  />
-  </div>
-  <button type="button" id="BtnBuscar" class="btn btn-primary" Text="Buscar" onclick="BucasArticulo()"> Buscar
-   <i class="fas fa-search"></i>
-  </button>
-</div>
-
-
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
 <table class="table">
     <thead>
         <tr>
@@ -32,13 +25,13 @@
                 @Html.DisplayNameFor(model => model.Precio_Venta)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.idCategoria)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.idSocursal)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.Cantidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Socusal_nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ubicacion)
             </th>
             <th></th>
         </tr>
@@ -59,30 +52,20 @@
                 @Html.DisplayFor(modelItem => item.Precio_Venta)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.idCategoria)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.idSocursal)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Cantidad)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.idArticulo }) |
-                @Html.ActionLink("Details", "Details", new { id=item.idArticulo}) |
+                @Html.DisplayFor(modelItem => item.Socusal_nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ubicacion)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
                 @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
             </td>
         </tr>
 }
     </tbody>
 </table>
-@*<script>
-    bus_sec = function() {
-        $.post(
-            '/ArticuloDatos/BuscarArticulo', {
-            idInput: $('#INPUTBuscar').val()
-
-        });
-    }
-
-</script>*@

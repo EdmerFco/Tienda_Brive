@@ -2,11 +2,14 @@
 using Brive_ACME.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace Brive_ACME.Controllers
 {
     public class ArticulosController1 : Controller
     {
+        Conexion conexion = new Conexion();
 
         ArticuloDatos admin = new ArticuloDatos();
         // GET: ArticulosController1
@@ -19,7 +22,8 @@ namespace Brive_ACME.Controllers
         // GET: ArticulosController1/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            Articulo articulo = admin.ConssultarUNO(id);
+            return View(articulo);
         }
 
         // GET: ArticulosController1/Create
@@ -84,5 +88,15 @@ namespace Brive_ACME.Controllers
                 return View();
             }
         }
+
+        ///metodo para el buscador
+        ///
+        public ActionResult BucasArticulo()
+        {
+            string nombre = "#INPUTBuscar";
+            List<Busqueda> lista = admin.BuscarArticulo(nombre);
+            return View(lista);
+        }
+
     }
 }

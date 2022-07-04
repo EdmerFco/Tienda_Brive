@@ -43,6 +43,7 @@ ubicacion = @ubicacion
 where idSucursales= @id;
 end
 
+exec ActualizarSocursal 2,'SucursalB', 'Ciudad de mexico'
 Create procedure Eliminar_Socursal 
 (
 @id int
@@ -53,4 +54,4 @@ where idSucursales = @id
 end
 go
 
-exec Eliminar_Socursal 1
+exec Eliminar_Socursal 3

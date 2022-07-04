@@ -1,18 +1,18 @@
-Create  procedure Crear_Articulos
+Alter  procedure Crear_Articulos
 (
 @codigo nchar(10),
 @nombre varchar(100) , 
 @Precio_Venta decimal,
-@Estado varchar(60),
-@idCategoria int 
+@idCategoria int, 
+@cantidad int
 )
 as 
 begin
-insert into Articulo(codigo,nombre, Precio_Venta,Estado , idCategoria) 
-values (@codigo,@nombre, @Precio_Venta,@Estado , @idCategoria)
+insert into Articulo(codigo,nombre, Precio_Venta, idCategoria, Cantidad) 
+values (@codigo,@nombre, @Precio_Venta , @idCategoria, @cantidad)
 end 
 
-exec Crear_Articulos 123,'barriatas',25,'Tienda',2
+exec Crear_Articulos 123,'barriatas',25,1, 10
 select * from Articulo 
 
 create procedure una_Articulo
@@ -26,23 +26,25 @@ where idArticulo = @id;
 end 
 go 
 
-exec una_Usuario 2
+exec una_Articulo 2
 
-alter procedure Consultar_Articulo
+create procedure Consultar_Articulo
 as begin
 select * from Articulo
 end 
 go 
 Exec Consultar_Articulo
 
-Create procedure ActualizarArticulo
+alter procedure ActualizarArticulo
 (
 @id int,
 @codigo nchar(10),
 @nombre varchar(100) , 
 @Precio_Venta decimal,
-@Estado varchar(60),
-@idCategoria int 
+@idCategoria int,
+@idSocursal int,
+@Cantidad int
+
 )
 as 
 begin 
@@ -50,13 +52,16 @@ update Articulo set
  codigo = @codigo,
  nombre = @nombre, 
  Precio_Venta = @Precio_Venta,
- Estado = @Estado, 
- idCategoria = @idCategoria 
+ idCategoria = @idCategoria,
+ idSocursal = @idSocursal,
+ Cantidad = @Cantidad
+
 where idArticulo = @id;
 end
 
-Exec ActualizarArticulo 2,124,'Barritas Fresa',25,'Tienda',2
+Exec ActualizarArticulo 5,12,'Barritas Piña',25,1, 2,10
 
+select * from Articulo
 Create procedure Eliminar_Articulo
 (
 @id int
@@ -67,4 +72,4 @@ where idArticulo = @id
 end
 go
 
-exec Eliminar_Articulo 1
+exec Eliminar_Articulo 4

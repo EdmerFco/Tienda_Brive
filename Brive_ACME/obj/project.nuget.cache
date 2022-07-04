@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vkELfCoo6aQLknsJ0nPdookaR5q1AaG+GasSEHRKbfaF1TxQppb9/jAkjBZIjEwXRuvSou3FPumxm1GwhGALYQ==",
+  "dgSpecHash": "XqttUelvmt9m+duSXDHJbdOrmhBYjN6Pwse3Q/MISQAYQvkI3llhO55AlQZ1pzaFu4KbivFNfLKATYcTWYIbPQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pacoh\\Documents\\BRive\\Brive_ACME\\Brive_ACME.csproj",
+  "projectFilePath": "C:\\Users\\pacoh\\Documents\\GitHub\\Tienda_Brive\\Brive_ACME\\Brive_ACME.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pacoh\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",
     "C:\\Users\\pacoh\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

@@ -13,7 +13,7 @@ insert into almacen(fecha,impuesto ,total, estadeo ,idUsuario ,idArtuculo)
 values (@fecha,@impuesto ,@total, @estadeo ,@idUsuario,@idArtuculo)
 end 
 
- 
+ exec Crear_Almacen '2022-06-30',0.2,4000, 'En Venta', 3,2
 select * from Venta 
 
 create procedure una_Almacen

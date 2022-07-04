@@ -7,6 +7,7 @@ create table Sucursales
  nombre varchar(100) not null, 
  ubicacion varchar(100) not null
 );
+select * from Sucursales
 create table Usuarios
 (
 idUsuarios int primary key not null,
@@ -23,7 +24,7 @@ idAlmacen int primary key not null,
 fecha date,
 impuesto decimal,
 total decimal, 
-estadeo varchar(30),
+estado varchar(30),
 idUsuario int foreign key references Usuarios(idUsuarios),
 idArtuculo int foreign key references Articulo(idArticulo),
 );
@@ -33,7 +34,6 @@ idArticulo int primary key not null,
 codigo nchar(10) not null,
 nombre varchar(100) not null, 
 Precio_Venta decimal not null,
-Estado varchar(60),
 idCategoria int foreign key references Categorias(idCategorias)
 );
 
@@ -66,5 +66,4 @@ Total decimal,
 Estado varchar(60),
 IdSucursal int foreign key references  Sucursales(idSucursales),
 idUsuario int foreign key references Usuarios(idUsuarios),
-
 );

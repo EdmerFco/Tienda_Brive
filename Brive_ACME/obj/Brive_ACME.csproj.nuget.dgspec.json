@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pacoh\\Documents\\BRive\\Brive_ACME\\Brive_ACME.csproj": {}
+    "C:\\Users\\pacoh\\Documents\\GitHub\\Tienda_Brive\\Brive_ACME\\Brive_ACME.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pacoh\\Documents\\BRive\\Brive_ACME\\Brive_ACME.csproj": {
+    "C:\\Users\\pacoh\\Documents\\GitHub\\Tienda_Brive\\Brive_ACME\\Brive_ACME.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pacoh\\Documents\\BRive\\Brive_ACME\\Brive_ACME.csproj",
+        "projectUniqueName": "C:\\Users\\pacoh\\Documents\\GitHub\\Tienda_Brive\\Brive_ACME\\Brive_ACME.csproj",
         "projectName": "Brive_ACME",
-        "projectPath": "C:\\Users\\pacoh\\Documents\\BRive\\Brive_ACME\\Brive_ACME.csproj",
+        "projectPath": "C:\\Users\\pacoh\\Documents\\GitHub\\Tienda_Brive\\Brive_ACME\\Brive_ACME.csproj",
         "packagesPath": "C:\\Users\\pacoh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pacoh\\Documents\\BRive\\Brive_ACME\\obj\\",
+        "outputPath": "C:\\Users\\pacoh\\Documents\\GitHub\\Tienda_Brive\\Brive_ACME\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pacoh\\AppData\\Roaming\\NuGet\\NuGet.Config",

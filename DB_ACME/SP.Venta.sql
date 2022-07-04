@@ -14,8 +14,8 @@ insert into Venta(fecha, impuestos,Total ,Estado ,IdSucursal,idUsuario)
 values (@fecha, @impuestos,@Total ,@Estado ,@IdSucursal,@idUsuario)
 end 
 
- 
-select * from Venta 
+exec Crear_Venta '2022-05-02',0.6, 25,'En tienda',1,2
+select * from Usuarios
 
 create procedure una_Venta
 (
@@ -59,7 +59,7 @@ idUsuario  = @idUsuario
 where idVenta= @id;
 end
 
-
+exec Actualizar_Venta 1,'2022-06-03',0.6, 25,'En Alacen',1,2
 Create procedure Eliminar_Venta
 (
 @id int

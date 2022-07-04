@@ -1,4 +1,4 @@
-alter  procedure Crear_Usuarios
+create  procedure Crear_Usuarios
 (
 @nombre varchar(60),
 @Direccion varchar(100),
